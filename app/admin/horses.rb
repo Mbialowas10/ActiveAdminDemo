@@ -5,7 +5,7 @@ ActiveAdmin.register Horse do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :age, :top_speed, :number_of_legs, :breed_id
+  permit_params :name, :age, :top_speed, :number_of_legs, :breed_id
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register Horse do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end
