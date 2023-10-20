@@ -1,11 +1,10 @@
 ActiveAdmin.register Horse do
-
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :age, :top_speed, :number_of_legs, :breed_id
+  permit_params :name, :age, :top_speed, :number_of_legs, :breed_id, :image
   #
   # or
   #
@@ -14,5 +13,13 @@ ActiveAdmin.register Horse do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-
+  form do |f|
+    f.semantic_errors
+    f.inputs
+    # let's add this piece:
+    f.inputs do
+      f.input :image, as: :file
+    end
+    f.actions
+  end
 end
