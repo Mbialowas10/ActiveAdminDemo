@@ -18,7 +18,7 @@ ActiveAdmin.register Horse do
     f.inputs
     # let's add this piece:
     f.inputs do
-      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image) : ''
+      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image, size: '200x200') : ''
     end
     f.actions
   end
